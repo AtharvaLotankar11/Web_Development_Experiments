@@ -1,0 +1,126 @@
+body{
+    font-family: Verdana, Tahoma, sans-serif;
+    line-height: 1.6;
+    background-color: lightblue;
+  }
+  
+  header div{
+    background: linear-gradient(to right, lightcoral, pink, white);
+    text-align: center;
+    padding: 20px 10px 20px 10px; /*Top, right, bottom, left*/
+    border: 10px;
+    border-style: solid;
+    border-color: #BABC1B;
+    border-radius: 1rem;
+    margin: auto;
+  } 
+  
+  nav {
+    background: linear-gradient(to right, #1a00c2, #33e4f6, #1418ff);
+    padding: 1rem 0; /*root element (rem)*/
+    border: 5px;
+    border-style: solid;
+    border-color: #4AF4CD;
+    border-radius: 16px;
+    margin: 20px 4px 2px 4px;
+  }
+  
+  nav ul{
+    list-style-type: none;
+    display: flex; /*flexbox-model: horizontize the list*/
+    justify-content: center;
+  }
+  nav ul li a:hover {
+      background: linear-gradient(to right, #E6E6FA, #ADD8E6, white);
+      color: black; /* Change text color */
+      transition: all 0.3s ease-in-out; /* Smooth transition */
+      padding: 0.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+  /*basically showing a pathway to css so that it applies it specifically to that item only*/
+  nav ul li a {
+    font-family: helvetica;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+  }
+  .style-section{
+    background-color:#ffff;
+    padding: 3rem 2rem;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    /*Red-Green-Blue-alpha(opacity)*/
+    border-radius: 8px;
+    margin: 2rem 1rem 2rem 1rem;
+  }
+  
+  .style-section h2{
+    color: darkblue;
+    border-bottom: 2px solid #3498DB;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  label{
+    font-family: Open Sans, sans-serif;
+    font-size: 1.3rem;
+  }
+  
+  input{
+    width: 435px;
+    height: 9px;
+    padding: 10px;
+    margin-left: 134px;
+    border-color: black;
+    cursor: pointer;
+  }
+
+  input[type="tel"]{
+    width: 435px;
+    height: 9px;
+    padding: 10px;
+    margin-left: 45px;
+    border-color: black;
+    cursor: pointer;
+  }
+  
+  textarea{
+    width: 450px;
+    height: 70px;
+    margin-left: 55px;
+    border-color:black;
+    border-width:2px;
+    cursor: pointer;
+  }
+
+  .btn{
+    font-family: Verdana, Tahoma, sans-serif;
+    background:linear-gradient(to right, darkblue, #40D4E2);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .btn:hover {
+    color: cyan;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    border-style: solid;
+    border-color: cyan;
+    border-radius: 5px;
+  }
+
+  footer{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.25rem;
+    background: linear-gradient(to right, #a9c9ff, #ffbbec);
+    padding: 1rem;
+    border-radius: 5px;
+}
