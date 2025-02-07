@@ -1,0 +1,158 @@
+/* General Reset and Base Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(45deg, #2980B9, #6DD5FA, #FFFFFF); /* Example gradient */
+    background-size: 300% 300%;
+    animation: gradientAnimation 12s ease infinite;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Ensure footer stays at the bottom */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header Styles */
+header {
+    background: rgba(255, 255, 255, 0.1); /* Translucent background */
+    backdrop-filter: blur(5px); /* Creates the frosted glass effect */
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+header li {
+    margin-bottom: 0.3rem;
+}
+
+/* Main Styles */
+main {
+    flex: 1; /*  Allow main to grow and push the footer down */
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center the form */
+}
+
+.c-form {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 3rem;
+    width: 80%; /* Adjust as needed */
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.c-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.c-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #eee;
+}
+
+.c-form input[type="text"],
+.c-form input[type="tel"],
+.c-form input[type="email"],
+.c-form input[type="date"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.btn {
+    background: linear-gradient(to right, #4A90E2, #63B8FF);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        background: linear-gradient(to right, #3577C7, #4EA3E0);
+    }
+
+    &:active {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        transform: translateY(1px);
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #eee;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .c-form {
+        width: 95%;
+        padding: 2rem;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
