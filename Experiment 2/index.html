@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simple Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Creation of a Simple Contact Form</h1>
+        <div>
+            <p>To Create a Simple Contact Form where one can input their details</p>
+            <p>
+                <ul>
+                    <li>To Input the Details</li>
+                    <li>A Pop Up Will appear that sucessfully submitted</li>
+                    <li>If same details are entered then diff pop up occur to refer same detail already entered.</li>
+                </ul>
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="c-form">
+            <div>
+                <h2>Enter All Your Details</h2>
+                <form action="/submit-form" method="POST" id="contactForm"> <!-- Added form ID -->
+                    <!--Name-->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter Your Name">
+
+                    <!--Phone Number-->
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" placeholder="Enter your Phone-Number">
+
+                    <!--Email-->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter Your Email">
+
+                    <!--Date of Birth-->
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" placeholder="DD/MM/YYYY">
+
+                    <!--University-->
+                    <label for="university">University:</label>
+                    <input type="text" id="university" placeholder="Enter your University Name: ">
+
+                    <p style="text-align: center;">
+                        <button type="submit" class="btn">Submit</button>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center;">&copy Atharva Lotankar 2025</footer>
+
+    <script src="script.js"></script>  <!-- Added JavaScript link -->
+</body>
+</html>
