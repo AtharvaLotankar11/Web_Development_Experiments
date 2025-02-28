@@ -1,0 +1,117 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General App Styles */
+.App {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #ff9a8b, #ff6a88, #d26bff); /* Soft pastel gradient */
+  color: #333;
+  padding: 30px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  letter-spacing: 2px;
+}
+
+/* Styling for the weather location */
+h3 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+/* List of weather data */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+li {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+li:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+strong {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Styling for the weather icon */
+img {
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+/* Loading and Error message styles */
+p {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* Error message styling */
+p.error {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+  .App {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  ul {
+    font-size: 1.1rem;
+  }
+
+  li {
+    padding: 12px;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
