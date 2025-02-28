@@ -9,7 +9,7 @@ const App = () => {
 
   // Fetching Weather Data Using useEffect
   useEffect(() => {
-    const apiKey = '3b75fb27bf3f40cca4f53408251302'; // Your API key
+    const apiKey = 'my-api-key'; // Your API key
     const city = 'Mumbai'; // City name
     const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`; // Weather API endpoint
 
