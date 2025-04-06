@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Submissions</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Favorite Song Submissions</h1>
+        <a href="/form" class="btn">Add Another Song</a>
+        
+        <div class="songs-container">
+            <% songs.forEach(song => { %>
+                <div class="song-card">
+                    <h2><%= song.songName %></h2>
+                    <p class="artist">by <%= song.artist %></p>
+                    <p class="genre"><%= song.genre %></p>
+                    <p class="submitted-by">Submitted by: <%= song.name %></p>
+                    <p class="date"><%= song.submissionDate.toLocaleDateString() %></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</body>
+</html>
