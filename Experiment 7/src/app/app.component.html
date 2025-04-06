@@ -1,0 +1,54 @@
+<div class="dashboard-container">
+  <div class="background-gradient"></div>
+  <div class="dashboard">
+    <div class="glass-card">
+      <h1>Feedback Form</h1>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" formControlName="name" placeholder="Enter your name">
+          <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched" class="error">
+            Name is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" formControlName="email" placeholder="Enter your email">
+          <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="error">
+            Valid email is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Feedback</label>
+          <textarea 
+            formControlName="feedback" 
+            placeholder="Your feedback..."
+            (input)="form.get('feedback')?.updateValueAndValidity()">
+          </textarea>
+          <div class="counter {{counterClass}}">
+            {{ form.get('feedback')?.value?.length || 0 }}/{{ MAX_FEEDBACK_LENGTH }} characters
+          </div>
+          <div *ngIf="form.get('feedback')?.errors?.['maxLength']" class="error">
+            Feedback exceeds {{ MAX_FEEDBACK_LENGTH }} characters!
+          </div>
+          
+          <div *ngIf="form.get('feedback')?.errors?.['required'] && form.get('feedback')?.touched" class="error">
+            Feedback is required.
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="form.invalid">Submit</button>
+      </form>
+    </div>
+
+    <div class="glass-card" *ngIf="submittedItems.length > 0">
+      <h2>Submitted Feedback</h2>
+      <div class="submission" *ngFor="let item of submittedItems">
+        <p><strong>{{ item.name }}</strong> ({{ item.email }})</p>
+        <p>{{ item.feedback }}</p>
+      </div>
+    </div>
+  </div>
+</div>
